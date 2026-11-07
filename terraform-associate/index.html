@@ -4,7 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Terraform Associate (004) · Cert Dojo</title>
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23111'/><text x='32' y='45' font-size='36' text-anchor='middle' fill='%23e8b04b' font-family='serif'>道</text></svg>">
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png">
+<link rel="shortcut icon" href="../images/favicon/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png">
+<link rel="manifest" href="../images/favicon/site.webmanifest">
+<meta name="theme-color" content="#1a1814">
 <script>try{var t=localStorage.getItem("certdojo:theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 <style>
 :root{
@@ -319,7 +324,9 @@ const TESTS = [
 ];
 // Real exam: 60 minutes for 57 questions. The timer scales that to the test length.
 const EXAM_MINUTES_PER_Q = 60 / 57;
-const PASS_TARGET = 70; // HashiCorp doesn't publish its pass mark; 70% is a sensible target.
+const PASS_TARGET = 70;
+const PASS_NOTE = "HashiCorp doesn't publish the real pass mark.";
+const REAL_EXAM_Q = 57; // questions on the real exam, shown as a slider shortcut
 const LS_RESULTS = `certdojo:${CERT}:results`;
 const LS_SESSION = `certdojo:${CERT}:session`;
 
@@ -380,8 +387,8 @@ function syncCount(resetToMax) {
   el.style.setProperty("--fill", ((v - el.min) / (max - el.min) * 100) + "%");
   $("countDesc").textContent = v === max ? `All ${max} questions. Full attempts are saved as your first and best scores.`
     : `${v} of ${max}, picked at random. Only full-length attempts count towards first and best scores.`;
-  const marks = [...new Set([10, 20, 40, 57, max].filter(m => m >= +el.min && m <= max))];
-  $("ticks").innerHTML = marks.map(m => `<button type="button" data-v="${m}" style="--p:${(m - el.min) / (max - el.min)}">${m === max ? "All " + m : m === 57 ? '57<span class="tick-x"> (real exam)</span>' : m}</button>`).join("");
+  const marks = [...new Set([10, 20, 40, REAL_EXAM_Q, max].filter(m => m >= +el.min && m <= max))].sort((a, b) => a - b);
+  $("ticks").innerHTML = marks.map(m => `<button type="button" data-v="${m}" style="--p:${(m - el.min) / (max - el.min)}">${m === max ? "All " + m : m === REAL_EXAM_Q ? m + '<span class="tick-x"> (real exam)</span>' : m}</button>`).join("");
 }
 $("qCount").addEventListener("input", () => { syncCount(); updateStartNote(); });
 $("ticks").addEventListener("click", e => { const b = e.target.closest("[data-v]"); if (b) { $("qCount").value = b.dataset.v; syncCount(); updateStartNote(); } });
@@ -593,7 +600,7 @@ function renderResults(sess, res, { correct, pct, secs, timedOut, isFirst, isBes
         <div>
           <span class="eyebrow">${esc(sess.testName)} · ${sess.exam ? "Exam mode" : "Practice mode"}</span>
           <p class="verdict">${pass ? "Passed. Nicely done." : "Not there yet. Keep training."}</p>
-          <span class="muted">Target: ${PASS_TARGET}% or more. HashiCorp doesn't publish the real pass mark.</span>
+          <span class="muted">Target: ${PASS_TARGET}% or more. ${PASS_NOTE}</span>
           <div class="badges">${badges.join("")}</div>
         </div>
       </div>

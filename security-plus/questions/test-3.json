@@ -1,0 +1,1364 @@
+[
+  {
+    "id": "sp3-1",
+    "topic": "5. Security program management",
+    "type": "single",
+    "question": "A law firm must keep client case files for ten years after a case closes. What is the BEST way to meet this requirement?",
+    "options": [
+      "Keep files only on lawyers' laptops",
+      "Keep a protected archive that is retained for the full ten years",
+      "Let clients download their own files from the portal and then remove the originals from storage",
+      "Delete case files once they're a year old"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "Data retention requires the data to stay available and protected for the whole mandated period."
+  },
+  {
+    "id": "sp3-2",
+    "topic": "3. Security architecture",
+    "type": "single",
+    "question": "An insurer moving to a public cloud wants to create, rotate and revoke encryption keys centrally. What should it use?",
+    "options": [
+      "A key management system",
+      "A password manager",
+      "A screened subnet",
+      "A load balancer"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A key management system (KMS) handles the lifecycle of encryption keys."
+  },
+  {
+    "id": "sp3-3",
+    "topic": "4. Security operations",
+    "type": "single",
+    "question": "A new IPS keeps flagging the company's own backup software as an attack. What should the administrator do?",
+    "options": [
+      "Disable the IPS permanently",
+      "Ignore all IPS alerts",
+      "Uninstall the backup software and replace it with a product the IPS recognises",
+      "Tune the IPS rules for the legitimate traffic"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "Tuning reduces false positives while keeping protection in place."
+  },
+  {
+    "id": "sp3-4",
+    "topic": "2. Threats, vulnerabilities & mitigations",
+    "type": "single",
+    "question": "An internal app crashes or returns database errors when users enter unexpected characters. What is the BEST fix?",
+    "options": [
+      "Change the database password",
+      "Validate all input on the server side",
+      "Add more memory to the server",
+      "Move the app to a new VLAN"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "Input validation stops malformed or malicious data reaching the application logic and database."
+  },
+  {
+    "id": "sp3-5",
+    "topic": "1. General security concepts",
+    "type": "single",
+    "question": "A data centre door opens only after a palm-vein scan. Which authentication factor is this?",
+    "options": [
+      "Something you are",
+      "Somewhere you are",
+      "Something you know",
+      "Something you have"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Biometrics such as palm veins are 'something you are'."
+  },
+  {
+    "id": "sp3-6",
+    "topic": "5. Security program management",
+    "type": "single",
+    "question": "A company stocks spare switches on site so failed units can be replaced within an hour. Which metric does this improve?",
+    "options": [
+      "RPO",
+      "MTTR",
+      "MTBF",
+      "ARO"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "Keeping spares on hand shortens the mean time to repair."
+  },
+  {
+    "id": "sp3-7",
+    "topic": "2. Threats, vulnerabilities & mitigations",
+    "type": "single",
+    "question": "A disgruntled employee with legitimate access deletes production data before resigning. Which threat actor is this?",
+    "options": [
+      "Unskilled attacker",
+      "Insider threat",
+      "Nation-state",
+      "Hacktivist"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "Insiders already have authorized access, which makes their actions harder to detect."
+  },
+  {
+    "id": "sp3-8",
+    "topic": "4. Security operations",
+    "type": "single",
+    "question": "A scan flags a vulnerability in Java on a server that doesn't have Java installed. What should the analyst do?",
+    "options": [
+      "Install Java on the server so the missing patch can be applied and the alert cleared",
+      "Confirm it's a false positive and document it",
+      "Rebuild the server immediately",
+      "Disable the vulnerability scanner"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "Findings should be validated; a confirmed false positive is documented, and the scan can be tuned."
+  },
+  {
+    "id": "sp3-9",
+    "topic": "2. Threats, vulnerabilities & mitigations",
+    "type": "single",
+    "question": "A free PDF converter a user installed also opened a backdoor for remote access. Which malware is this?",
+    "options": [
+      "Worm",
+      "Virus",
+      "Bloatware",
+      "Trojan"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "A Trojan hides malicious functions inside software that looks legitimate."
+  },
+  {
+    "id": "sp3-10",
+    "topic": "1. General security concepts",
+    "type": "single",
+    "question": "What is the process of replacing a sensitive value with a random substitute that maps back only through a secure lookup?",
+    "options": [
+      "Obfuscation",
+      "Encryption",
+      "Tokenization",
+      "Hashing"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "Tokenization replaces data with a token that has no mathematical relationship to the original."
+  },
+  {
+    "id": "sp3-11",
+    "topic": "3. Security architecture",
+    "type": "single",
+    "question": "A new firewall protecting a web server VLAN should allow only HTTPS from anywhere to the web server at 10.2.0.10. Which rule is correct?",
+    "options": [
+      "Source: ANY, Destination: 10.2.0.10, Protocol: TCP, Port: 443, Allow",
+      "Source: 10.2.0.10, Destination: ANY, Protocol: UDP, Port: 443, Allow",
+      "Source: ANY, Destination: ANY, Protocol: TCP, Port: 80, Allow",
+      "Source: ANY, Destination: 10.2.0.10, Protocol: TCP, Port: 22, Deny"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "HTTPS uses TCP port 443, and the destination is the web server."
+  },
+  {
+    "id": "sp3-12",
+    "topic": "1. General security concepts",
+    "type": "single",
+    "question": "An employee taps a badge on a door reader and then types a PIN on the keypad. Why does this count as multi-factor authentication?",
+    "options": [
+      "It combines something you have with something you know",
+      "It relies on the employee's location inside the building",
+      "It uses two separate things the employee knows",
+      "It uses two physical tokens issued by the company"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "The badge is a possession factor and the PIN is a knowledge factor, so two different categories are used."
+  },
+  {
+    "id": "sp3-13",
+    "topic": "2. Threats, vulnerabilities & mitigations",
+    "type": "single",
+    "question": "A trusted software vendor's update server was compromised, and customers installed a malicious update. Which attack is this?",
+    "options": [
+      "Typosquatting",
+      "Supply chain attack",
+      "Pharming",
+      "Watering hole attack"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "A supply chain attack compromises a trusted supplier to reach its customers."
+  },
+  {
+    "id": "sp3-14",
+    "topic": "5. Security program management",
+    "type": "single",
+    "question": "A payroll provider processes employee data on behalf of a company, following the company's instructions. What is the provider's role?",
+    "options": [
+      "Data owner",
+      "Data controller",
+      "Data subject",
+      "Data processor"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "A processor handles personal data on behalf of the controller."
+  },
+  {
+    "id": "sp3-15",
+    "topic": "3. Security architecture",
+    "type": "single",
+    "question": "A medical device must respond to sensor input within strict timing limits. Which type of OS is MOST appropriate?",
+    "options": [
+      "RTOS",
+      "Mobile OS",
+      "Hypervisor",
+      "General-purpose desktop OS"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A real-time operating system guarantees deterministic response times."
+  },
+  {
+    "id": "sp3-16",
+    "topic": "4. Security operations",
+    "type": "single",
+    "question": "A script automatically creates a ticket, assigns it to the right team and attaches the SIEM data whenever a phishing report arrives. Which BEST describes this?",
+    "options": [
+      "Orchestration",
+      "Data masking",
+      "Escalation only",
+      "Penetration testing"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Orchestration coordinates several automated steps across different systems."
+  },
+  {
+    "id": "sp3-17",
+    "topic": "4. Security operations",
+    "type": "single",
+    "question": "An administrator wants a report showing how many intrusion attempts against the network were blocked. Which log source is BEST?",
+    "options": [
+      "IPS logs",
+      "DHCP logs",
+      "NTP logs",
+      "Print server logs"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "An IPS records the attacks it detects and blocks."
+  },
+  {
+    "id": "sp3-18",
+    "topic": "4. Security operations",
+    "type": "single",
+    "question": "After ransomware, file servers are rebuilt from clean images and data is restored from backup. Which phase is this?",
+    "options": [
+      "Identification",
+      "Recovery",
+      "Lessons learned",
+      "Containment"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "Restoring systems and data to normal operation is recovery."
+  },
+  {
+    "id": "sp3-19",
+    "topic": "3. Security architecture",
+    "type": "single",
+    "question": "Before putting a new application server online, which hardening step should be done FIRST?",
+    "options": [
+      "Install a game for testing",
+      "Remove unnecessary software and services",
+      "Disable all logging",
+      "Enable guest accounts"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "Removing what isn't needed reduces the attack surface."
+  },
+  {
+    "id": "sp3-20",
+    "topic": "2. Threats, vulnerabilities & mitigations",
+    "type": "single",
+    "question": "An IPS captures a request containing: ' UNION SELECT username, password FROM users --. Which attack is this?",
+    "options": [
+      "Cross-site scripting",
+      "SQL injection",
+      "LDAP injection",
+      "Command injection"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "UNION SELECT is used to pull extra data from a database through SQL injection."
+  },
+  {
+    "id": "sp3-21",
+    "topic": "4. Security operations",
+    "type": "single",
+    "question": "A team wants to check its incident response plan by discussing a scenario, with no impact on production. Which activity fits?",
+    "options": [
+      "Tabletop exercise",
+      "Red team engagement",
+      "Live simulation on production",
+      "Full failover test"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A tabletop exercise is a discussion-based check that doesn't touch systems."
+  },
+  {
+    "id": "sp3-22",
+    "topic": "3. Security architecture",
+    "type": "single",
+    "question": "A new firewall blocks a legitimate business application. What is the BEST way to allow it?",
+    "options": [
+      "Allow all traffic between the two networks until the application's vendor responds",
+      "Disable logging on the firewall",
+      "Create specific rules that match the application's traffic",
+      "Remove the firewall"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "Specific rules allow only the required traffic, following least privilege."
+  },
+  {
+    "id": "sp3-23",
+    "topic": "3. Security architecture",
+    "type": "single",
+    "question": "An online shop needs checkout to keep working even if one web server crashes. What should it use?",
+    "options": [
+      "Several servers behind a load balancer",
+      "A single server with a larger disk",
+      "Daily tape backups",
+      "A stronger admin password"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Redundant servers with a load balancer remove single points of failure."
+  },
+  {
+    "id": "sp3-24",
+    "topic": "5. Security program management",
+    "type": "single",
+    "question": "A company loses about £2,000 per stolen laptop and expects 5 thefts a year. What does £10,000 represent?",
+    "options": [
+      "Annualized rate of occurrence (ARO)",
+      "Exposure factor (EF)",
+      "Single loss expectancy (SLE)",
+      "Annualized loss expectancy (ALE)"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "ALE = SLE × ARO = £2,000 × 5 = £10,000."
+  },
+  {
+    "id": "sp3-25",
+    "topic": "2. Threats, vulnerabilities & mitigations",
+    "type": "single",
+    "question": "A web log shows: GET /products?id=5;cat%20/etc/passwd. Which control would BEST prevent this?",
+    "options": [
+      "Disk encryption",
+      "Account lockout",
+      "Input validation",
+      "Load balancing"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "Validating and sanitising input prevents injected commands or queries from running."
+  },
+  {
+    "id": "sp3-26",
+    "topic": "1. General security concepts",
+    "type": "single",
+    "question": "Alex wants Taylor to be able to confirm a message really came from Alex. What should Alex do?",
+    "options": [
+      "Sign it with Alex's private key",
+      "Hash it without a key",
+      "Encrypt it with Taylor's public key",
+      "Encrypt it with Alex's public key"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A digital signature made with the sender's private key can be verified with the sender's public key."
+  },
+  {
+    "id": "sp3-27",
+    "topic": "5. Security program management",
+    "type": "single",
+    "question": "A contractor who encrypted project files with their own key is leaving. What should happen to keep the files accessible?",
+    "options": [
+      "Delete the contractor's files",
+      "Leave the contractor's account active indefinitely so the files stay accessible",
+      "Change the file names",
+      "Recover or archive the contractor's decryption keys"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "Keeping the decryption keys means the organization can still access the encrypted data."
+  },
+  {
+    "id": "sp3-28",
+    "topic": "4. Security operations",
+    "type": "single",
+    "question": "While investigating a DoS attack, an analyst saves a forensic copy of the logs. How can they show the copy matches the original?",
+    "options": [
+      "Hash both and compare the values",
+      "Compare the file names",
+      "Check the file sizes only",
+      "Open both files in a text editor"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Matching cryptographic hashes prove the copy is identical."
+  },
+  {
+    "id": "sp3-29",
+    "topic": "2. Threats, vulnerabilities & mitigations",
+    "type": "single",
+    "question": "Logs show a few common passwords tried against many different accounts, with only one or two attempts per account. Which attack is this?",
+    "options": [
+      "Brute force",
+      "Password spraying",
+      "Birthday attack",
+      "Rainbow table attack"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "Password spraying tries a few common passwords across many accounts to avoid lockouts."
+  },
+  {
+    "id": "sp3-30",
+    "topic": "4. Security operations",
+    "type": "single",
+    "question": "Staff must not visit online gambling sites from the office. What is the MOST efficient control?",
+    "options": [
+      "Encrypt the hard drives",
+      "Use stronger Wi-Fi passwords",
+      "Install antivirus software on all office PCs and run a full scan every evening",
+      "Add a category rule to the web content filter"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "Content filters block whole categories of websites."
+  },
+  {
+    "id": "sp3-31",
+    "topic": "5. Security program management",
+    "type": "single",
+    "question": "Unplanned outages keep happening when updates are pushed to production without review. What should be implemented?",
+    "options": [
+      "A bug bounty programme",
+      "A honeynet",
+      "Data masking",
+      "Change management procedures"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "Change management adds review, testing and approval before changes are deployed."
+  },
+  {
+    "id": "sp3-32",
+    "topic": "4. Security operations",
+    "type": "single",
+    "question": "A security team documents exact, ordered steps to follow when a ransomware infection is confirmed. What is this document?",
+    "options": [
+      "Playbook",
+      "Service level agreement",
+      "Memorandum of understanding",
+      "Acceptable use policy"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A playbook gives step-by-step procedures for a specific type of incident."
+  },
+  {
+    "id": "sp3-33",
+    "topic": "3. Security architecture",
+    "type": "single",
+    "question": "Before patching a virtual server, the administrator wants to be able to return to its exact current state. What should they create?",
+    "options": [
+      "A differential tape backup",
+      "A certificate",
+      "A snapshot",
+      "A hash"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "A VM snapshot captures the system's state at a point in time so it can be rolled back quickly."
+  },
+  {
+    "id": "sp3-34",
+    "topic": "1. General security concepts",
+    "type": "single",
+    "question": "In a discretionary access control model, who decides who can access a file?",
+    "options": [
+      "The file's owner",
+      "The data subject",
+      "The security administrator only",
+      "The operating system's labels"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "In DAC, the owner controls the permissions on their resources."
+  },
+  {
+    "id": "sp3-35",
+    "topic": "4. Security operations",
+    "type": "single",
+    "question": "A network DLP sensor inspects files as they're uploaded to external sites. Which data state is being protected?",
+    "options": [
+      "Data in transit",
+      "Data in use",
+      "Archived data",
+      "Data at rest"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Data moving across the network is in transit."
+  },
+  {
+    "id": "sp3-36",
+    "topic": "5. Security program management",
+    "type": "single",
+    "question": "A company is buying a high-speed WAN link and wants guaranteed uptime and repair times in writing. Which document is this?",
+    "options": [
+      "SLA",
+      "NDA",
+      "MOU",
+      "BPA"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A service level agreement defines measurable service commitments."
+  },
+  {
+    "id": "sp3-37",
+    "topic": "5. Security program management",
+    "type": "single",
+    "question": "Which topic is MOST appropriate for a general user security awareness programme?",
+    "options": [
+      "Tuning SIEM correlation rules",
+      "Configuring BGP routing",
+      "Writing firewall ACLs",
+      "Creating and managing strong passwords"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "Awareness training covers practical user behaviour such as password hygiene."
+  },
+  {
+    "id": "sp3-38",
+    "topic": "5. Security program management",
+    "type": "single",
+    "question": "During a phishing simulation, what is the ideal action for an employee who receives the fake email?",
+    "options": [
+      "Reply asking for more details",
+      "Report it using the official reporting process",
+      "Forward it to colleagues so they know to watch out for the same message",
+      "Click the link to check if it's real"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "Reporting suspicious messages is the behaviour simulations aim to encourage."
+  },
+  {
+    "id": "sp3-39",
+    "topic": "1. General security concepts",
+    "type": "single",
+    "question": "A web server wants to cut the number of certificate revocation checks clients send to the CA. What should it enable?",
+    "options": [
+      "OCSP stapling",
+      "Wildcard certificates",
+      "Certificate pinning",
+      "Key escrow"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "OCSP stapling lets the server provide a cached revocation status to clients."
+  },
+  {
+    "id": "sp3-40",
+    "topic": "1. General security concepts",
+    "type": "single",
+    "question": "A company adds network segmentation because its endpoint protection can't fully stop advanced attacks. What type of control is the segmentation?",
+    "options": [
+      "Compensating",
+      "Deterrent",
+      "Detective",
+      "Directive"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A compensating control reduces risk when a primary control isn't enough."
+  },
+  {
+    "id": "sp3-41",
+    "topic": "5. Security program management",
+    "type": "single",
+    "question": "Developers hand operations a release with documented testing, approval and a rollback plan before deployment. Which process is this?",
+    "options": [
+      "Data classification",
+      "Penetration testing",
+      "Incident response",
+      "Change management"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "Change management formalises how changes are approved and deployed."
+  },
+  {
+    "id": "sp3-42",
+    "topic": "3. Security architecture",
+    "type": "single",
+    "question": "A public file-sharing service wants users to sign in with their existing Google or Microsoft accounts. What should it implement?",
+    "options": [
+      "Local accounts",
+      "Port security",
+      "Kerberos only",
+      "Federation"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "Federation trusts external identity providers for authentication."
+  },
+  {
+    "id": "sp3-43",
+    "topic": "2. Threats, vulnerabilities & mitigations",
+    "type": "single",
+    "question": "System File Checker reports that core OS files have been replaced, and antivirus can't detect any malware. Which malware is MOST likely?",
+    "options": [
+      "Logic bomb",
+      "Adware",
+      "Worm",
+      "Rootkit"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "Rootkits change system files to hide themselves from security tools."
+  },
+  {
+    "id": "sp3-44",
+    "topic": "2. Threats, vulnerabilities & mitigations",
+    "type": "single",
+    "question": "A web log shows: GET /download?file=../../../../etc/shadow. Which attack is this?",
+    "options": [
+      "Directory traversal",
+      "Cross-site scripting",
+      "SQL injection",
+      "Buffer overflow"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Repeated ../ sequences try to escape the web root and read files elsewhere."
+  },
+  {
+    "id": "sp3-45",
+    "topic": "1. General security concepts",
+    "type": "single",
+    "question": "A developer is storing user passwords in a database. Which of the following would BEST make cracking stolen hashes harder?",
+    "options": [
+      "Salting each password before hashing",
+      "Storing passwords in plain text",
+      "Using the username as the hash",
+      "Encoding passwords with Base64"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Salts make each hash unique and defeat precomputed rainbow tables."
+  },
+  {
+    "id": "sp3-46",
+    "topic": "4. Security operations",
+    "type": "single",
+    "question": "Which process automatically builds and tests code every time a developer commits changes?",
+    "options": [
+      "Continuous deployment",
+      "Code signing",
+      "Waterfall",
+      "Continuous integration"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "CI merges and tests code changes often and automatically."
+  },
+  {
+    "id": "sp3-47",
+    "topic": "3. Security architecture",
+    "type": "single",
+    "question": "What does a cloud responsibility matrix show?",
+    "options": [
+      "Which data is classified as secret",
+      "Which vulnerabilities in the cloud environment are rated critical and need patching first",
+      "Which users have admin rights",
+      "Which security tasks belong to the provider and which to the customer"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "The matrix sets out shared responsibilities between the cloud provider and the customer."
+  },
+  {
+    "id": "sp3-48",
+    "topic": "3. Security architecture",
+    "type": "single",
+    "question": "Which protocol is commonly used to query and manage a central directory of users and groups?",
+    "options": [
+      "LDAP",
+      "SMTP",
+      "SNMP",
+      "NTP"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "The Lightweight Directory Access Protocol accesses directory services such as Active Directory."
+  },
+  {
+    "id": "sp3-49",
+    "topic": "4. Security operations",
+    "type": "single",
+    "question": "An IPS log shows: 'src 10.5.20.14 → dst 172.16.3.8:445 — SMB exploit attempt — blocked'. What does this indicate?",
+    "options": [
+      "A user printed a document",
+      "An internal host tried to exploit SMB on another host and was blocked",
+      "A backup job completed",
+      "An external attacker on the Internet successfully exploited SMB on an internal server"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "Both addresses are private, so this is internal traffic. Port 445 is SMB, and the attempt was blocked."
+  },
+  {
+    "id": "sp3-50",
+    "topic": "2. Threats, vulnerabilities & mitigations",
+    "type": "single",
+    "question": "A tester sends probes to a company's servers to find open ports and running services. Which activity is this?",
+    "options": [
+      "Active reconnaissance",
+      "Dumpster diving",
+      "Passive reconnaissance",
+      "OSINT"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Active reconnaissance interacts directly with the target's systems."
+  },
+  {
+    "id": "sp3-51",
+    "topic": "3. Security architecture",
+    "type": "single",
+    "question": "An access point is configured with WEP and a 10-character key. What is the MOST significant concern?",
+    "options": [
+      "Hidden SSID",
+      "Weak encryption",
+      "Too many SSIDs",
+      "An overly long password"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "WEP is broken and can be cracked quickly."
+  },
+  {
+    "id": "sp3-52",
+    "topic": "2. Threats, vulnerabilities & mitigations",
+    "type": "single",
+    "question": "An attacker captures a valid login request and resends it later to gain access. Which attack is this?",
+    "options": [
+      "Downgrade attack",
+      "Bluesnarfing",
+      "Collision attack",
+      "Replay attack"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "A replay attack reuses captured authentication data."
+  },
+  {
+    "id": "sp3-53",
+    "topic": "2. Threats, vulnerabilities & mitigations",
+    "type": "single",
+    "question": "Many unrelated hosts suddenly send traffic to an online store until it becomes unresponsive. Which attack is MOST likely?",
+    "options": [
+      "Phishing",
+      "DDoS",
+      "Typosquatting",
+      "Privilege escalation"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "A distributed flood of traffic from many sources is a DDoS attack."
+  },
+  {
+    "id": "sp3-54",
+    "topic": "5. Security program management",
+    "type": "single",
+    "question": "A contract lists the specific deliverables, timelines and tasks a consultant must complete. Which document is this?",
+    "options": [
+      "NDA",
+      "SLA",
+      "SOW",
+      "MOU"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "A statement of work details the specific tasks and deliverables."
+  },
+  {
+    "id": "sp3-55",
+    "topic": "3. Security architecture",
+    "type": "single",
+    "question": "A company connects several branch offices to multiple cloud providers and wants traffic routed efficiently over different links. Which technology fits?",
+    "options": [
+      "SD-WAN",
+      "WPA3",
+      "IPsec transport mode",
+      "802.1X"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Software-defined WAN routes traffic intelligently across multiple connections."
+  },
+  {
+    "id": "sp3-56",
+    "topic": "3. Security architecture",
+    "type": "single",
+    "question": "In a zero trust architecture, which component evaluates access requests against policy and decides to allow or deny them?",
+    "options": [
+      "Data plane",
+      "Policy enforcement point",
+      "Implicit trust zone",
+      "Policy engine"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "The policy engine decides; the enforcement point applies the decision."
+  },
+  {
+    "id": "sp3-57",
+    "topic": "2. Threats, vulnerabilities & mitigations",
+    "type": "single",
+    "question": "Which malware turns a computer into part of a network used to launch DDoS attacks?",
+    "options": [
+      "Logic bomb",
+      "Bot",
+      "Spyware",
+      "Keylogger"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "Bots are controlled through a command-and-control server as part of a botnet."
+  },
+  {
+    "id": "sp3-58",
+    "topic": "5. Security program management",
+    "type": "single",
+    "question": "A company receives notice that it must preserve all email related to a lawsuit. What is this called?",
+    "options": [
+      "Data retention",
+      "Chain of custody",
+      "Legal hold",
+      "Data sovereignty"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "A legal hold requires preserving relevant data for litigation."
+  },
+  {
+    "id": "sp3-59",
+    "topic": "3. Security architecture",
+    "type": "single",
+    "question": "A company wants to detect anyone moving inside a secure storage room after hours. Which device is BEST?",
+    "options": [
+      "Bollard",
+      "Motion sensor",
+      "Fencing",
+      "Badge reader on the door only"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "Motion sensors (such as microwave or infrared) detect movement inside an area."
+  },
+  {
+    "id": "sp3-60",
+    "topic": "5. Security program management",
+    "type": "single",
+    "question": "Before a big product launch, IT checks that servers and bandwidth can handle the expected spike in users. Which activity is this?",
+    "options": [
+      "Data masking",
+      "Capacity planning",
+      "Penetration testing",
+      "Risk transference"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "Capacity planning makes sure resources can meet demand."
+  },
+  {
+    "id": "sp3-61",
+    "topic": "1. General security concepts",
+    "type": "single",
+    "question": "Which security property prevents a sender from later denying they sent a digitally signed message?",
+    "options": [
+      "Availability",
+      "Obfuscation",
+      "Tokenization",
+      "Non-repudiation"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "Non-repudiation provides proof of origin through digital signatures."
+  },
+  {
+    "id": "sp3-62",
+    "topic": "4. Security operations",
+    "type": "single",
+    "question": "An alert fires when a user edits the hosts file on their workstation. How would this activity BEST be classified?",
+    "options": [
+      "Normal maintenance",
+      "Risky behaviour",
+      "Policy exception",
+      "Unintentional error"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "Editing the hosts file can redirect traffic and is a common malware technique, so it's treated as risky."
+  },
+  {
+    "id": "sp3-63",
+    "topic": "4. Security operations",
+    "type": "single",
+    "question": "Attackers stole data by exploiting a web server vulnerability that had a patch available for months. Which process failed?",
+    "options": [
+      "Physical security",
+      "Patch management",
+      "Data classification",
+      "Asset disposal"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "Patch management should have applied the available fix in time."
+  },
+  {
+    "id": "sp3-64",
+    "topic": "3. Security architecture",
+    "type": "single",
+    "question": "During onboarding, IT grants each new hire only the applications their job role needs. Which concept is this?",
+    "options": [
+      "Data sovereignty",
+      "Access control configuration based on role",
+      "Supply chain analysis",
+      "Key escrow"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "Setting up access based on job role puts least privilege into practice."
+  },
+  {
+    "id": "sp3-65",
+    "topic": "4. Security operations",
+    "type": "single",
+    "question": "An unknown account was found on a database server. What should the administrator do FIRST?",
+    "options": [
+      "Disable the account and isolate the server",
+      "Reboot the server several times to clear the unknown account from memory",
+      "Delete all the server's logs",
+      "Email all users about it"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Containment limits the damage while preserving evidence."
+  },
+  {
+    "id": "sp3-66",
+    "topic": "1. General security concepts",
+    "type": "single",
+    "question": "Which is the MOST common use of asymmetric encryption in protocols such as TLS?",
+    "options": [
+      "Securely exchanging a shared session key",
+      "Hashing passwords",
+      "Encrypting very large files quickly, because asymmetric algorithms are faster than symmetric ones",
+      "Compressing data"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Asymmetric cryptography exchanges or agrees a symmetric session key; symmetric encryption then protects the bulk data."
+  },
+  {
+    "id": "sp3-67",
+    "topic": "3. Security architecture",
+    "type": "single",
+    "question": "Salespeople carry laptops with customer data. Which control would BEST protect the data if a laptop is stolen?",
+    "options": [
+      "Full disk encryption",
+      "Antivirus software",
+      "A screen saver",
+      "A host-based firewall"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "FDE keeps data unreadable without the key, even if the drive is removed."
+  },
+  {
+    "id": "sp3-68",
+    "topic": "5. Security program management",
+    "type": "single",
+    "question": "A security officer lists every type of data the organization holds and where it's stored. What is this called?",
+    "options": [
+      "Data sovereignty",
+      "Data obfuscation",
+      "Data masking",
+      "Data inventory"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "A data inventory catalogues the data an organization holds."
+  },
+  {
+    "id": "sp3-69",
+    "topic": "3. Security architecture",
+    "type": "single",
+    "question": "A company wants to inspect and filter all employees' outbound web traffic. Which device should it use?",
+    "options": [
+      "Load balancer",
+      "Jump server",
+      "Forward proxy",
+      "Reverse proxy"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "A forward proxy sits between internal users and the Internet."
+  },
+  {
+    "id": "sp3-70",
+    "topic": "1. General security concepts",
+    "type": "single",
+    "question": "A written rule says all staff must lock their screens when they leave their desks. What type of control is this?",
+    "options": [
+      "Technical",
+      "Managerial",
+      "Physical",
+      "Corrective"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "Policies and procedures are managerial (administrative) controls."
+  },
+  {
+    "id": "sp3-71",
+    "topic": "4. Security operations",
+    "type": "single",
+    "question": "Which is the MOST important protection against losing data to ransomware?",
+    "options": [
+      "More monitors for the SOC",
+      "Longer passwords",
+      "Faster network switches",
+      "Reliable, tested, offline backups"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "Backups that can't be reached by the ransomware allow recovery without paying."
+  },
+  {
+    "id": "sp3-72",
+    "topic": "3. Security architecture",
+    "type": "single",
+    "question": "A team gets a hardened Linux image for a new web app. What else should it do to secure the app?",
+    "options": [
+      "Securely configure the web server software too",
+      "Disable all OS updates",
+      "Leave the application's default passwords in place so the vendor can support it",
+      "Turn on every available service"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A hardened OS doesn't secure the application; the web server needs its own secure configuration."
+  },
+  {
+    "id": "sp3-73",
+    "topic": "3. Security architecture",
+    "type": "single",
+    "question": "MAC filtering was enabled on an access point, yet unauthorized devices still connect. What is the BEST improvement?",
+    "options": [
+      "Reduce the access point's transmit power slightly so the signal doesn't leave the building",
+      "Change the channel",
+      "Enable WPA3 encryption with strong authentication",
+      "Hide the SSID"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "MAC addresses are easy to spoof. Strong encryption and authentication properly control access."
+  },
+  {
+    "id": "sp3-74",
+    "topic": "4. Security operations",
+    "type": "single",
+    "question": "An application upgrade fails because a required library version isn't installed. What type of issue is this?",
+    "options": [
+      "Race condition",
+      "Memory leak",
+      "Privilege escalation",
+      "Dependency"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "Applications rely on other software components (dependencies) being present at the right versions."
+  },
+  {
+    "id": "sp3-75",
+    "topic": "3. Security architecture",
+    "type": "single",
+    "question": "In 802.1X, the client device communicates with the switch, which relays to a RADIUS server. What is the switch's role?",
+    "options": [
+      "Supplicant",
+      "Certificate authority",
+      "Authentication server",
+      "Authenticator"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "The authenticator (switch or AP) sits between the supplicant (client) and the authentication server."
+  },
+  {
+    "id": "sp3-76",
+    "topic": "2. Threats, vulnerabilities & mitigations",
+    "type": "single",
+    "question": "A researcher reports a hardware vulnerability in a network appliance's management controller. What information is MOST useful for assessing exposure?",
+    "options": [
+      "Office locations of staff",
+      "Firmware versions of the affected devices",
+      "The colour of the appliances",
+      "The building's power rating"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "Hardware flaws are usually fixed through firmware updates, so knowing current versions is key."
+  },
+  {
+    "id": "sp3-77",
+    "topic": "3. Security architecture",
+    "type": "multi",
+    "question": "Which TWO physical controls would BEST stop vehicles approaching a building's entrance? (Select TWO)",
+    "options": [
+      "Fencing",
+      "Motion sensors",
+      "Badge readers",
+      "CCTV cameras",
+      "Bollards"
+    ],
+    "answer": [
+      0,
+      4
+    ],
+    "explanation": "Bollards and fencing physically block or channel vehicles. Cameras and sensors only detect them."
+  },
+  {
+    "id": "sp3-78",
+    "topic": "3. Security architecture",
+    "type": "single",
+    "question": "Employees want to sign in once in the morning and then reach file shares, email and printers without signing in again. Which technology provides this?",
+    "options": [
+      "Single sign-on (SSO)",
+      "Account lockout",
+      "Password vaulting",
+      "Multi-factor authentication"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "SSO lets one authentication grant access to several services."
+  },
+  {
+    "id": "sp3-79",
+    "topic": "5. Security program management",
+    "type": "single",
+    "question": "After moving to a new HR system, the company checks its own controls against the vendor's security requirements. What is this?",
+    "options": [
+      "Penetration test",
+      "Internal self-assessment",
+      "Regulatory fine",
+      "Independent third-party audit"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "An internal assessment is done by the organization itself."
+  },
+  {
+    "id": "sp3-80",
+    "topic": "2. Threats, vulnerabilities & mitigations",
+    "type": "single",
+    "question": "An attacker gets around a web app's controls and sends database commands directly through a form field. Which attack is this?",
+    "options": [
+      "Cross-site request forgery",
+      "Session fixation",
+      "SQL injection",
+      "Clickjacking"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "Injecting SQL statements through input fields is SQL injection."
+  },
+  {
+    "id": "sp3-81",
+    "topic": "1. General security concepts",
+    "type": "single",
+    "question": "Several companies track shared shipments using blockchain. What is the shared record of transactions called?",
+    "options": [
+      "Certificate store",
+      "Registry hive",
+      "Ledger",
+      "Key escrow"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "A blockchain keeps a distributed ledger of transactions."
+  },
+  {
+    "id": "sp3-82",
+    "topic": "2. Threats, vulnerabilities & mitigations",
+    "type": "single",
+    "question": "A bank's domain registration was changed without permission, and its DNS now points to an attacker's servers. Which attack is this?",
+    "options": [
+      "Typosquatting",
+      "DNS cache poisoning on one PC",
+      "Domain hijacking",
+      "URL redirection"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "Domain hijacking takes control of the domain registration itself."
+  },
+  {
+    "id": "sp3-83",
+    "topic": "3. Security architecture",
+    "type": "single",
+    "question": "Two highly sensitive systems must have no network connection to each other at all. What should be used?",
+    "options": [
+      "VPN",
+      "Firewall rule",
+      "Air gap",
+      "VLAN"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "An air gap means physical separation with no network connection."
+  },
+  {
+    "id": "sp3-84",
+    "topic": "5. Security program management",
+    "type": "single",
+    "question": "An executive assistant receives an urgent email 'from the CEO' asking for a wire transfer and recognises it as fake. Which training outcome does this show?",
+    "options": [
+      "Configuring a firewall",
+      "Patching a server",
+      "Restoring a backup",
+      "Recognising social engineering"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "Awareness training aims to help users spot social engineering such as business email compromise."
+  },
+  {
+    "id": "sp3-85",
+    "topic": "3. Security architecture",
+    "type": "single",
+    "question": "Employees use their own personal phones for work email, with a company app managing only work data. Which deployment model is this?",
+    "options": [
+      "COPE",
+      "Corporate-owned",
+      "BYOD",
+      "CYOD"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "Bring your own device means employees use personally owned devices for work."
+  }
+]
