@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cert Dojo · Practice exams for IT certifications</title>
+<meta name="description" content="Practice quizzes with explanations and topic-by-topic scoring for IT certifications.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23111'/><text x='32' y='45' font-size='36' text-anchor='middle' fill='%23e8b04b' font-family='serif'>道</text></svg>">
+<script>try{var t=localStorage.getItem("certdojo:theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<style>
+:root{
+  --bg:#f4f1ea;--bg2:#ebe6db;--card:#fffdf8;--ink:#1a1814;--muted:#6e675b;--line:#ddd5c5;
+  --gold:#b8862b;--shadow:0 1px 2px rgba(40,30,10,.06),0 8px 24px rgba(40,30,10,.06);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){
+  --bg:#121110;--bg2:#1a1816;--card:#1d1b19;--ink:#efe9de;--muted:#9c9384;--line:#302c27;
+  --gold:#e3b155;--shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.35);
+}}
+:root[data-theme=dark]{
+  --bg:#121110;--bg2:#1a1816;--card:#1d1b19;--ink:#efe9de;--muted:#9c9384;--line:#302c27;
+  --gold:#e3b155;--shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased;
+  background-image:radial-gradient(var(--line) 1px,transparent 1px);background-size:22px 22px;background-attachment:fixed}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.card:has(.stretch:focus-visible){outline:3px solid var(--c);outline-offset:3px}
+.stretch:focus-visible{outline:none}
+
+/* header */
+header{padding:22px 0}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.02em;text-decoration:none}
+.mark{width:34px;height:34px;border-radius:9px;background:var(--ink);color:var(--gold);display:grid;place-items:center;
+  font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:20px}
+
+/* hero */
+.hero{position:relative;padding:56px 0 40px;overflow:hidden}
+.kanji{position:absolute;right:-10px;top:-30px;font-family:"Hiragino Mincho ProN","Yu Mincho","Noto Serif JP",serif;
+  font-size:clamp(160px,28vw,300px);line-height:1;color:var(--ink);opacity:.05;pointer-events:none;user-select:none;writing-mode:vertical-rl}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.eyebrow::before{content:"";width:22px;height:2px;background:var(--gold)}
+h1{font-family:Georgia,"Iowan Old Style","Times New Roman",serif;font-weight:700;
+  font-size:clamp(2.3rem,6vw,4rem);line-height:1.05;letter-spacing:-.02em;margin:14px 0 16px}
+h1 em{font-style:italic;color:var(--gold)}
+.lede{font-size:1.12rem;color:var(--muted);max-width:52ch;margin:0}
+.stats{display:flex;flex-wrap:wrap;gap:28px;margin-top:30px}
+.stat b{display:block;font-family:Georgia,serif;font-size:1.7rem;line-height:1}
+.stat span{font-size:.85rem;color:var(--muted)}
+
+/* grid */
+.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:26px 0 16px;border-top:1px solid var(--line);padding-top:26px}
+.section-head h2{margin:0;font-size:1.05rem;letter-spacing:.06em;text-transform:uppercase}
+.section-head p{margin:0;color:var(--muted);font-size:.9rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:18px;padding-bottom:30px}
+@media(min-width:700px){.grid{grid-template-columns:repeat(2,1fr)}}
+
+.card{--c:#888;position:relative;display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);
+  border-radius:16px;padding:22px 22px 20px;text-decoration:none;box-shadow:var(--shadow);overflow:hidden;
+  transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+.card::before{content:"";position:absolute;inset:0 0 auto 0;height:4px;background:var(--c)}
+.card.live:hover{transform:translateY(-4px);border-color:var(--c);box-shadow:var(--shadow),0 14px 34px color-mix(in srgb,var(--c) 22%,transparent)}
+.card-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+.badge{width:72px;height:72px;border-radius:12px;display:grid;place-items:center;font-weight:800;font-size:.95rem;letter-spacing:.02em;color:#fff;background:var(--c)}
+.badge.img{background:#fff;border:1px solid var(--line);border-radius:16px;padding:5px;overflow:hidden;
+  box-shadow:0 2px 8px color-mix(in srgb,var(--c) 18%,transparent)}
+.badge img{width:100%;height:100%;object-fit:cover;display:block}
+.card.locked .badge img{filter:grayscale(.3);opacity:.9}
+.pill{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 10px;border-radius:999px;
+  background:color-mix(in srgb,var(--c) 14%,transparent);color:var(--c)}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]) .pill{color:color-mix(in srgb,var(--c) 60%,#fff)}}
+:root[data-theme=dark] .pill{color:color-mix(in srgb,var(--c) 60%,#fff)}
+.pill.soon{background:var(--bg2);color:var(--muted)}
+.vendor{font-size:.8rem;color:var(--muted);font-weight:600;letter-spacing:.04em;text-transform:uppercase}
+.card h3{margin:2px 0 8px;font-size:1.3rem;line-height:1.25}
+.card p{margin:0 0 18px;color:var(--muted);font-size:.95rem}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;margin-bottom:18px}
+.meta span{font-size:.8rem;padding:4px 9px;border:1px solid var(--line);border-radius:7px;color:var(--muted)}
+.cta{display:flex;align-items:center;justify-content:space-between;font-weight:700;border-top:1px solid var(--line);padding-top:14px}
+.cta .arrow{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--c);color:#fff;transition:transform .18s ease}
+.card.live:hover .arrow{transform:translateX(4px)}
+.card.locked{opacity:.72}
+.card.locked:hover{opacity:.85}
+/* whole live card is clickable via the CTA link; the cert name link sits above it */
+.stretch{text-decoration:none;color:inherit}
+.stretch::after{content:"";position:absolute;inset:0;z-index:1;border-radius:16px}
+.card h3 a{position:relative;z-index:2;color:inherit;text-decoration:none;
+  background-image:linear-gradient(var(--c),var(--c));background-size:0 2px;background-position:0 100%;background-repeat:no-repeat;
+  transition:color .18s ease,background-size .25s ease}
+.card h3 a:hover,.card h3 a:focus-visible{color:var(--c);background-size:100% 2px}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]) .card h3 a:hover,:root:not([data-theme=light]) .card h3 a:focus-visible{color:color-mix(in srgb,var(--c) 55%,#fff)}}
+:root[data-theme=dark] .card h3 a:hover,:root[data-theme=dark] .card h3 a:focus-visible{color:color-mix(in srgb,var(--c) 55%,#fff)}
+.ext{font-size:.7em;margin-left:4px;opacity:.55;transition:opacity .18s ease}
+.card h3 a:hover .ext{opacity:1}
+.card.locked .cta{color:var(--muted);font-weight:600}
+
+/* how it works */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin:6px 0 40px}
+.step{padding:4px 0}
+.step .n{font-family:Georgia,serif;font-size:2rem;color:var(--gold);line-height:1}
+.step h4{margin:8px 0 4px;font-size:1rem}
+.step p{margin:0;color:var(--muted);font-size:.93rem}
+
+footer{border-top:1px solid var(--line);padding:24px 0 40px;color:var(--muted);font-size:.85rem;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center}
+
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+@media(prefers-reduced-motion:no-preference){
+  .grid .card{animation:rise .5s ease both}
+  .grid .card:nth-child(2){animation-delay:.07s}.grid .card:nth-child(3){animation-delay:.14s}.grid .card:nth-child(4){animation-delay:.21s}
+  @keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+}
+
+.theme-toggle{font:inherit;font-size:.85rem;font-weight:600;display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;
+  border:1px solid var(--line);background:var(--card);color:var(--muted);cursor:pointer;transition:color .15s,border-color .15s}
+.theme-toggle:hover{color:var(--ink);border-color:var(--gold)}
+.theme-toggle .ico{font-size:1rem;line-height:1}
+:root[data-theme=dark]{color-scheme:dark}:root[data-theme=light]{color-scheme:light}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header><a class="brand" href="./"><span class="mark" aria-hidden="true">道</span>Cert Dojo</a></header>
+
+  <section class="hero">
+    <div class="kanji" aria-hidden="true">道場</div>
+    <span class="eyebrow">Practice exams</span>
+    <h1>Train hard.<br><em>Pass</em> first time.</h1>
+    <p class="lede">A training ground for IT certifications: realistic practice quizzes with explanations for every answer and topic-by-topic scoring, so you know exactly what to revise.</p>
+    <div class="stats" aria-live="polite">
+      <div class="stat"><b id="stat-certs">–</b><span>certifications</span></div>
+      <div class="stat"><b id="stat-qs">–</b><span>practice questions</span></div>
+    </div>
+  </section>
+
+  <div class="section-head">
+    <h2>Choose your exam</h2>
+    <p>More belts coming soon</p>
+  </div>
+  <div class="grid" id="grid"></div>
+
+  <div class="section-head"><h2>How it works</h2></div>
+  <div class="steps">
+    <div class="step"><div class="n">01</div><h4>Pick a cert</h4><p>Choose the exam you're working towards from the list above.</p></div>
+    <div class="step"><div class="n">02</div><h4>Choose how to train</h4><p>Pick a practice test, then go for instant feedback or a timed exam with results at the end.</p></div>
+    <div class="step"><div class="n">03</div><h4>Review and repeat</h4><p>See why each answer is right, spot weak topics, and retry the ones you missed.</p></div>
+  </div>
+
+  <footer>
+    <span>Cert Dojo · built while earning the certs</span>
+    <button class="theme-toggle" id="themeToggle" type="button"><span class="ico" aria-hidden="true"></span><span class="lbl"></span></button>
+    <span>Not affiliated with HashiCorp, CompTIA, Microsoft or Google.</span>
+  </footer>
+</div>
+
+<script>
+// Add a new exam here. status: "live" links to the page; "soon" shows a locked card.
+const CERTS = [
+  { id:"terraform-associate", vendor:"HashiCorp", name:"Terraform Associate (004)", code:"TF", badge:"images/badges/terraform_associate.png",
+    color:"#7b42bc", status:"live", href:"terraform-associate/", site:"https://developer.hashicorp.com/certifications/terraform-associate", questions:["terraform-associate/questions/test-1.json","terraform-associate/questions/test-2.json","terraform-associate/questions/test-3.json"],
+    blurb:"Infrastructure as code, the core workflow, state, modules and HCP Terraform.",
+    tags:["Associate","Multiple choice"] },
+  { id:"security-plus", vendor:"CompTIA", name:"Security+ (SY0\u2011701)", code:"S+", badge:"images/badges/security_plus.png",
+    color:"#c8202f", status:"soon", href:"security-plus/", site:"https://www.comptia.org/certifications/security",
+    blurb:"Threats, security architecture, operations and governance fundamentals.",
+    tags:["Core","Multiple choice"] },
+  { id:"az-900", vendor:"Microsoft", name:"Azure Fundamentals (AZ\u2011900)", code:"AZ", badge:"images/badges/az900.png",
+    color:"#0078d4", status:"soon", href:"az-900/", site:"https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/",
+    blurb:"Cloud concepts, Azure architecture and services, management and governance.",
+    tags:["Fundamentals","Multiple choice"] },
+  { id:"google-ace", vendor:"Google Cloud", name:"Associate Cloud Engineer (ACE)", code:"GC", badge:"images/badges/google_ace.png",
+    color:"#4285f4", status:"soon", href:"google-ace/", site:"https://cloud.google.com/learn/certification/cloud-engineer",
+    blurb:"Setting up, deploying, operating and securing solutions on Google Cloud.",
+    tags:["Associate","Multiple choice"] }
+];
+
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const grid = document.getElementById("grid");
+
+grid.innerHTML = CERTS.map(c => {
+  const live = c.status === "live";
+  return `<article class="card ${live ? "live" : "locked"}" style="--c:${esc(c.color)}">
+    <div class="card-top">
+      ${c.badge
+        ? `<span class="badge img"><img src="${esc(c.badge)}" alt="${esc(c.vendor)} ${esc(c.name)} badge" width="72" height="72" loading="lazy" onerror="this.parentNode.classList.remove('img');this.parentNode.textContent='${esc(c.code)}'"></span>`
+        : `<span class="badge" aria-hidden="true">${esc(c.code)}</span>`}
+      <span class="pill${live ? "" : " soon"}">${live ? "Ready" : "Coming soon"}</span>
+    </div>
+    <span class="vendor">${esc(c.vendor)}</span>
+    <h3>${c.site ? `<a href="${esc(c.site)}" target="_blank" rel="noopener" title="Official exam page">${esc(c.name)}<span class="ext" aria-hidden="true">↗</span><span class="sr"> (official exam page, opens in new tab)</span></a>` : esc(c.name)}</h3>
+    <p>${esc(c.blurb)}</p>
+    <div class="meta">${c.tags.map(t => `<span>${esc(t)}</span>`).join("")}<span class="qcount" data-id="${esc(c.id)}" hidden></span></div>
+    <div class="cta">${live ? `<a class="stretch" href="${esc(c.href)}">Start practising</a><span class="arrow" aria-hidden="true">→</span>` : `<span>In training…</span>`}</div>
+  </article>`;
+}).join("");
+
+document.getElementById("stat-certs").textContent = CERTS.filter(c => c.status === "live").length;
+
+// Count questions from each live cert's JSON (works when served over http; skipped when opened as a file)
+const countFile = f => fetch(f).then(r => r.ok ? r.json() : Promise.reject()).then(d => Array.isArray(d) ? d.length : (d.questions || []).length);
+Promise.all(CERTS.filter(c => c.status === "live" && c.questions).map(c =>
+  Promise.all([].concat(c.questions).map(countFile)).then(ns => {
+    const n = ns.reduce((a, b) => a + b, 0), tests = ns.length;
+    const el = grid.querySelector(`.qcount[data-id="${c.id}"]`);
+    if (el) { el.textContent = (tests > 1 ? tests + " tests · " : "") + n + " questions"; el.hidden = false; }
+    return n;
+  }).catch(() => 0)
+)).then(ns => {
+  const total = ns.reduce((a, b) => a + b, 0);
+  document.getElementById("stat-qs").textContent = total || "–";
+});
+</script>
+<script>
+(function(){
+  var btn=document.getElementById("themeToggle"), mq=matchMedia("(prefers-color-scheme: dark)");
+  var current=function(){return document.documentElement.dataset.theme||(mq.matches?"dark":"light")};
+  var paint=function(){var d=current()==="dark";btn.querySelector(".ico").textContent=d?"☀":"☾";
+    btn.querySelector(".lbl").textContent=d?"Light mode":"Dark mode";btn.setAttribute("aria-label","Switch to "+(d?"light":"dark")+" mode")};
+  btn.onclick=function(){var t=current()==="dark"?"light":"dark";document.documentElement.dataset.theme=t;try{localStorage.setItem("certdojo:theme",t)}catch(e){}paint()};
+  mq.addEventListener("change",paint);paint();
+})();
+</script>
+</body>
+</html>
